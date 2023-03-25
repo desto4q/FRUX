@@ -3,11 +3,11 @@ $bg: #ffffff;
 $logobg: #161616;
 $accent: #5E36F5;
 $accent2: #B6A6F0;
-$color6: #B6A6F0;
+$accent3: #D9D9D9;
 $color7: #E0234C;
 $color8: #23E04C;
 $inactive: #636363;
-
+$grey: grey;
 body {
     background-color: $bg;
 }
@@ -20,16 +20,19 @@ body {
     min-height: 100dvh;
     color: white;
 }
+
 .sidebar {
     padding: 12px 4px;
     max-width: 220px;
-    flex: 0.2;
+    width: 20%;
     background-color: $main;
     display: flex;
     flex-direction: column;
     gap: 48px;
     * {
         transition: 0.1s ease-out;
+        border-radius: 4px;
+        user-select: none;
     }
     .sidebar_links {
         display: flex;
@@ -60,7 +63,7 @@ body {
 
     .sidebar_settings {
         margin-top: auto;
-        border-top: 1px solid $color6;
+        border-top: 1px solid $accent3;
         padding: 10px 0;
         display: flex;
         flex-direction: column;
@@ -79,5 +82,99 @@ body {
             background-color: $accent;
             color: white;
         }
+    }
+}
+
+
+.main_page {
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    .header {
+        background-color: $bg;
+        color: black;
+        min-height: 58px;
+        // max-height: 60px;
+        display:flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-evenly;
+        border-bottom: 1px solid transparentize($color: $grey, $amount: .6);
+        padding: 14px;
+
+        .header_search {
+            display: flex;
+            align-items: center;
+            background-color: $accent3;
+            border-radius: 24px;
+            padding: 4px 20px;
+            width: 400px;
+            input {
+                all: unset;
+                width: auto;
+                height: 100%;
+                background-color: inherit;
+                width: 100%;
+            }
+            button {
+                all: unset;
+                display: grid;
+                place-items: center;
+                // background-color: $accent;
+                border-radius: 100%;
+                padding: 6px;
+                svg {
+                    // color: white;
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+           
+        }
+        .header_userInfo {
+            display: flex;
+            border-left: 1px solid transparentize($color: $grey, $amount: .6);
+            padding: 0 20px;
+            // background-color: red;
+        }
+        .header_notification {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid transparentize($color: $grey, $amount: .6);
+            padding: 0  12px;
+            .bell {
+                all: inherit;
+                border-left:none ;
+                border-radius: 100%;
+                outline: 1px solid transparentize($color: $grey, $amount: .6);
+                padding: 4px;
+            }
+        }
+    }
+
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    img {
+        height: 38px;
+        width: 38px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+    .name {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .id {
+        font-weight: 800;
+        font-size: 14px;
+        color: $accent;
     }
 }
