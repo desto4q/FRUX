@@ -3,27 +3,27 @@ import { BrandMastercard, Cash, CreditCard, History, Home, QuestionMark, Setting
 export let navLink = [
     {
         name:"Home",
-        to: "",
+        to: "/",
         Icon: Home,
     },
     {
         name:"Transactions",
-        to: "/offering",
+        to: "/transactions",
         Icon: History,
     },
     {
         name:"Card",
-        to: "",
+        to: "/card",
         Icon: BrandMastercard,
     },
     {
         name:"payment",
-        to: "",
+        to: "/payment",
         Icon: CreditCard,
     },
     {
         name:"get help",
-        to: "",
+        to: "/help",
         Icon: QuestionMark,
     }
 ]
