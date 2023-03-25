@@ -1,7 +1,10 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { createContext, useEffect, useLayoutEffect } from 'react'
 import "./App.scss"
 import Routing from './Routing/Routing'
 import WebFont from 'webfontloader';
+import { values } from './context/Context';
+
+export let AppContext = createContext()
 
 function App() {
   useLayoutEffect(()=>{
@@ -13,9 +16,11 @@ function App() {
     });
   })
   return (
-    <div className="app">
-      <Routing/>
-    </div>
+    <AppContext.Provider value={values()}>
+      <div className="app">
+        <Routing/>
+      </div>
+    </AppContext.Provider>
   )
 }
 

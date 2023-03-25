@@ -1,4 +1,5 @@
 import React from 'react'
+import Hamburger from './M_components/Hamburger'
 import UserInfo from './UserInfo'
 
 function Mobilenav() {
@@ -7,6 +8,7 @@ function Mobilenav() {
         <span>
             <UserInfo/>
         </span>
+        <Hamburger/>
     </div>
   )
 }
