@@ -1,4 +1,4 @@
-import { Cash, CreditCard, CurrencyNaira, History, Home, Location, Logout, Settings, } from "tabler-icons-react";
+import { BrandMastercard, Cash, CreditCard, History, Home, QuestionMark, Settings, Wallet, } from "tabler-icons-react";
 
 export let navLink = [
     {
@@ -7,24 +7,24 @@ export let navLink = [
         Icon: Home,
     },
     {
-        name:"Offering",
+        name:"Transactions",
         to: "/offering",
-        Icon: Cash,
+        Icon: History,
     },
     {
-        name:"Tithes",
+        name:"Card",
+        to: "",
+        Icon: BrandMastercard,
+    },
+    {
+        name:"payment",
         to: "",
         Icon: CreditCard,
     },
     {
-        name:"settings",
+        name:"get help",
         to: "",
-        Icon: Settings,
-    },
-    {
-        name:"History",
-        to: "",
-        Icon: History,
+        Icon: QuestionMark,
     }
 ]
 

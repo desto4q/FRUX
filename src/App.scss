@@ -13,6 +13,7 @@ body {
 }
 * {
     font-family: montserrat;
+    box-sizing: border-box;
 }
 .app {
     display: flex;
@@ -29,6 +30,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 28px;
+    .tablet {
+        display: none;
+    }
     * {
         transition: 0.1s ease-out;
         border-radius: 4px;
@@ -118,7 +122,7 @@ body {
             background-color: $accent3;
             border-radius: 24px;
             padding: 4px 20px;
-            width: 400px;
+            width: 50%;
             input {
                 all: unset;
                 width: auto;
@@ -144,8 +148,8 @@ body {
         .header_userInfo {
             display: flex;
             border-left: 1px solid transparentize($color: $grey, $amount: .6);
-            padding: 0 20px;
-            // background-color: red;
+            // padding: 0 20px;
+            white-space: nowrap;
         }
         .header_notification {
             display: flex;
@@ -169,6 +173,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
     img {
         height: 38px;
         width: 38px;
@@ -185,4 +190,36 @@ body {
         font-size: 14px;
         color: $accent;
     }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .sidebar {
+        width: fit-content;
+
+        .logo {
+            display: none;
+        }
+        .tablet {
+            display: flex;
+            padding: 4px;
+            margin: 0;
+            background-color: $logobg;
+            font-size: 8px;
+            align-self: center;
+            text-orientation: upright;
+            writing-mode: vertical-lr;
+        }
+        .sidebar_links {
+            p {
+                display: none;
+            }
+        }
+        .sidebar_settings {
+            p {
+                display: none;
+            }
+        }
+    }
+    
 }
