@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../App'
 
 function Hamburger() {
-    // let [hamState,setham] = useState(false)
     let {hamState,setHam} = useContext(AppContext)
     useEffect(()=>{
         console.log("gg")

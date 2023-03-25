@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../App'
 
 function UserInfo() {
+  let {userState} = useContext(AppContext)
   return (
     <div className='user'>
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="" />
+        <img src={userState.img} alt="" />
         <span className='user_info'>
             <p className='name'>
-                Riyad Mahrez
+                {userState.name}
             </p>
             <p className='id'>
-                #1212313
+                {userState.id}
             </p>
         </span>
     </div>
