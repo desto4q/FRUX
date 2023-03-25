@@ -7,7 +7,7 @@ import Links from './Links'
 function Sidebar() {
   return (
     <div className='sidebar'>
-      <span><h1>logo</h1></span>
+      <span className='logo'><h1>FRUX .</h1></span>
       <span className='sidebar_links'>
         {navLink.map(({to,name,Icon},key)=>{
           return (
