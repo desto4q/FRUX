@@ -2,10 +2,11 @@ $main: #1E1E1E;
 $bg: #ffffff;
 $logobg: #161616;
 $accent: #5E36F5;
-$acccent2: #B6A6F0;
+$accent2: #B6A6F0;
 $color6: #B6A6F0;
 $color7: #E0234C;
 $color8: #23E04C;
+$inactive: #636363;
 
 body {
     background-color: $bg;
@@ -20,8 +21,63 @@ body {
     color: white;
 }
 .sidebar {
-    padding: 12px 0;
-    max-width: 180px;
+    padding: 12px 4px;
+    max-width: 220px;
     flex: 0.2;
     background-color: $main;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    * {
+        transition: 0.1s ease-out;
+    }
+    .sidebar_links {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        font-size: 16px;
+        text-transform: capitalize;
+        a {
+            display: flex;
+            color: $inactive;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;   
+        }
+        :hover {
+            background-color: transparentize($color: $accent, $amount: .9);
+            color: white;
+        }
+
+        :active,:focus {
+            background-color: $accent;
+            color: white;
+        }
+        
+
+
+    }
+
+    .sidebar_settings {
+        margin-top: auto;
+        border-top: 1px solid $color6;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        button {
+            all:  unset;
+            display: flex;
+            align-items: center;
+            padding: 10px 10px;
+            gap: 8px;
+            text-transform: capitalize;
+            color: $inactive;
+            transition: 0.1s;
+        }
+
+        :hover,:focus {
+            background-color: $accent;
+            color: white;
+        }
+    }
 }
