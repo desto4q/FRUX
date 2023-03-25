@@ -1,5 +1,22 @@
-
+$main: #1E1E1E;
+$bg: #ffffff;
+$logobg: #161616;
+$accent: #5E36F5;
+$acccent2: #B6A6F0;
+$color6: #B6A6F0;
+$color7: #E0234C;
+$color8: #23E04C;
 
 body {
-    background-color: blue;
+    background-color: $bg;
+}
+* {
+    font-family: montserrat;
+}
+.app {
+    display: flex;
+    gap: 2px;
+}
+.sidebar {
+    
 }
