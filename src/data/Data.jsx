@@ -1,4 +1,4 @@
-import { Cash, CreditCard, CurrencyNaira, History, Home, Location, Logout, Settings } from "@tabler/icons";
+import { Cash, CreditCard, CurrencyNaira, History, Home, Location, Logout, Settings, } from "tabler-icons-react";
 
 export let navLink = [
     {

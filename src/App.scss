@@ -16,7 +16,12 @@ body {
 .app {
     display: flex;
     gap: 2px;
+    min-height: 100dvh;
+    color: white;
 }
 .sidebar {
-    
+    padding: 12px 0;
+    max-width: 180px;
+    flex: 0.2;
+    background-color: $main;
 }
