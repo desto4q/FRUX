@@ -3,7 +3,7 @@ import { BrandMastercard, Cash, CreditCard, History, Home, QuestionMark, Setting
 export let navLink = [
     {
         name:"Home",
-        to: "/",
+        to: "/dashboard",
         Icon: Home,
     },
     {

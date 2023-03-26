@@ -3,7 +3,7 @@ import "./App.scss"
 import Routing from './Routing/Routing'
 import WebFont from 'webfontloader';
 import { values } from './context/Context';
-
+import SignUp from './pages/Signup';
 export let AppContext = createContext()
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
   return (
     <AppContext.Provider value={values()}>
       <div className="app">
-        <Routing/>
+        < SignUp />
+        {/* <Routing/> */}
       </div>
     </AppContext.Provider>
   )

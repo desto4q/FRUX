@@ -20,7 +20,7 @@ function Routing() {
           <Mobilenav/>
           <M_sidebar/>
           <Routes>
-              <Route path='' element={<Dashboard/>}/>  
+              <Route path='/dashboard' element={<Dashboard/>}/>  
               <Route path='transactions' element={<Transactions/>}/>    
               <Route path='card' element={<Card />} />
               <Route path='payment' element={<Payment />} />
