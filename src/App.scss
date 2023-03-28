@@ -349,12 +349,26 @@ body {
     height: 1000px;
     display: flex;
     gap: 10px;
+    
+
+    .chart {
+        width: 100%;
+        height: 200px;
+        background-color: red;
+    }
+    .cont {
+        flex-direction: column;
+    }
     span {
         // background-color: red;
         flex: 0.5;
         padding: 4px;
         display: flex;
         gap: 10px;
+        .container {
+            display: flex;
+            gap: 10px;
+        }
         .expense {
             height: 140px;
             width: 320px;
