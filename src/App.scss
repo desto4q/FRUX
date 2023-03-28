@@ -112,14 +112,14 @@ body {
         background-color: $bg;
         color: black;
         min-height: 58px;
-        // max-height: 60px;
         display:flex;
         align-items: center;
         gap: 10px;
         justify-content: space-evenly;
         border-bottom: 1px solid transparentize($color: $grey, $amount: .6);
         padding: 14px;
-        // z-index: 20 !important;
+        top: 0;
+        position: sticky;
      
         .header_search {
             display: flex;
@@ -220,10 +220,7 @@ body {
     }
 }
 
-.dashboard {
-    height: 1000px;
-    // background-color: red;
-}
+
 
 /////hamburger
 .ham {
@@ -346,6 +343,103 @@ body {
     }
 }
 
+/// pages
+
+.dashboard {
+    height: 1000px;
+    display: flex;
+    gap: 10px;
+    span {
+        // background-color: red;
+        flex: 0.5;
+        padding: 4px;
+        display: flex;
+        gap: 10px;
+        .expense {
+            height: 140px;
+            width: 320px;
+            outline: 1px solid transparentize($color: $grey, $amount: 0.5);
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 18px;
+            }
+            div {
+                display: flex;
+                align-items: center;
+            }
+            div:first-child {
+                flex: 0.5;
+                justify-content: space-between;
+                padding: 4px;
+                select {
+                    background-color: $accent3;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    color: $accent;
+                    font-size: 16px;
+                    padding: 4px;
+                    display: flex;
+                    outline: none;
+                    font-weight: 700;
+                    outline: none;
+                }
+            }
+            .expense_flow {
+                display: flex;
+                // background-color: red;
+                height: 100%;
+                align-items: center;
+                justify-content: space-evenly;
+                span {
+                    all: unset;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    background-color: #F0F5FF;
+                    height: 70px;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    // width: 70px; 
+                    p {
+                        font-weight: 700;
+                    }
+                    .expense_balance {
+                        font-size: 18px;
+                        color: $accent;
+                        font-weight: 600;
+                    }
+                }
+                .income {
+                    .expense_balance {
+                        font-size: 18px;
+                        color: $accent;
+                        font-weight: 600;
+                        
+                    }
+                    .expense_balance::before {
+                        content: "+";
+                        margin-right: 4px;
+
+                    }
+                }
+                .outgoing {
+                    background-color: #FFF1F4;
+                    .expense_balance {
+                        color: $color7;
+                    }
+                    .expense_balance::before {
+                        content: "-";
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1000px) {
     .sidebar {
