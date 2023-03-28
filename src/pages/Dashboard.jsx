@@ -1,8 +1,11 @@
 import React from 'react'
+import Balance from '../components/Balance'
 
 function Dashboard() {
   return (
-    <div className='dashboard'>Dashboard</div>
+    <div className='dashboard'>
+      <Balance/>
+    </div>
   )
 }
 

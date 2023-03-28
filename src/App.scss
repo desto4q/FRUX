@@ -298,6 +298,54 @@ body {
     }
 }
 
+.dashboard {
+    display: flex;
+    padding: 8px;
+}
+
+.balance {
+    // height: 200px;
+    width: 300px;
+    border-radius: 8px;
+    height: max-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid transparentize($color: $grey, $amount: .5);
+    .balance_digit {
+        display: flex;
+        align-items: center;
+        padding: 18px 4px;
+        font-size: 22px;
+        font-weight: 700;
+        justify-content: space-between;
+        p {
+            display: flex;
+            align-items: center;
+        }
+        .box {
+            background-color: $accent2;
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+        }
+    }
+    .balance_number {
+        background-color: $accent;
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: space-between;
+        padding: 12px 8px;
+        p {
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+    }
+}
+
 
 @media screen and (max-width: 1000px) {
     .sidebar {

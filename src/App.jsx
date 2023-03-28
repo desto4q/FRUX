@@ -21,7 +21,6 @@ function App() {
       <div className="app">
         <Routing/>
       </div>
-      <Signup/>
     </AppContext.Provider>
   )
 }
