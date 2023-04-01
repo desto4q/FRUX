@@ -358,6 +358,10 @@ body {
     }
     .cont {
         flex-direction: column;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
     }
     span {
         // background-color: red;
@@ -452,6 +456,97 @@ body {
                 }
             }
         }
+    }
+}
+
+
+/////transactions 
+.beneficiary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    .beneficiary_price {
+        color: $color8;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    .beneficiary_price::before {
+        content: "+";
+    }
+
+    .negative {
+        color: $color7;
+    }
+    .negative::before {
+        content: "-";
+    }
+    div {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        gap: 10px;
+        div {
+            all: unset;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    img {
+        height: 38px;
+        width: 38px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+}
+.transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 320px;
+    padding: 8px 2px;
+    border-radius: 8px;
+    outline: 1px solid transparentize($color: $grey
+    , $amount: 0.5);
+    .transactions_list {
+        flex-direction: column;
+    }
+    span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-size: 18px;
+        }
+    }
+    button {
+        all: unset;
+        background-color: $accent2;
+        color: $accent;
+        height: fit-content;
+        padding: 3px;
+        font-size: 12px;
+        font-weight: 600;
+
+    }
+    .option {
+        align-self: flex-end;
+        margin: 0 8px;
+        select {
+            border-radius: 2px;
+            background-color: $accent;
+            outline: none;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+        }
+        
+        
     }
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Balance from '../components/Balance'
 import Echart from '../components/Echart'
 import Expenses from '../components/Expenses'
+import Last_transactions from '../components/Last_transactions'
 
 function Dashboard() {
   return (
@@ -10,7 +11,10 @@ function Dashboard() {
         <div className='container'>
           <Balance/>
           <Expenses/>
+          <Balance/>
+          <Last_transactions/>
         </div>
+
         <div className='container'>
           
         </div>
