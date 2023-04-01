@@ -12,13 +12,13 @@ function Last_transactions() {
           <Beneficiaries/>
           <Beneficiaries/>
         </span>
-        <div className='option'>
+        {/* <div className='option'>
             <select name="" id="" >
                 <option value="Daily">Daily</option>
                 <option value="weekly">Weekly</option>
                 <option value="Monthly">Montly</option>
             </select>
-        </div>
+        </div> */}
     </div>
   )
 }
