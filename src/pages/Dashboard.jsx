@@ -3,6 +3,7 @@ import Balance from '../components/Balance'
 import Echart from '../components/Echart'
 import Expenses from '../components/Expenses'
 import Last_transactions from '../components/Last_transactions'
+import Spending from '../components/Spending'
 
 function Dashboard() {
   return (
@@ -11,7 +12,7 @@ function Dashboard() {
         <div className='container'>
           <Balance/>
           <Expenses/>
-          <Balance/>
+          <Spending/>
           <Last_transactions/>
         </div>
 
