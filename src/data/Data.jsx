@@ -28,4 +28,29 @@ export let navLink = [
     }
 ]
 
-
+export const Userdata = [
+    {
+      id:1,
+      year: 2016,
+      Usergain: 9000,
+      UserLost: 1000,
+    },
+    {
+      id:2,
+      year: 2017,
+      Usergain: 9000,
+      UserLost: 1000,
+    },
+    {
+      id:3,
+      year: 2018,
+      Usergain: 9000,
+      UserLost: 1000,
+    },
+    {
+      id:4,
+      year: 2019,
+      Usergain: 9000,
+      UserLost: 1000,
+    }
+  ]

@@ -4,6 +4,7 @@ import Echart from '../components/Echart'
 import Expenses from '../components/Expenses'
 import Last_transactions from '../components/Last_transactions'
 import Spending from '../components/Spending'
+import Savings from '../components/Savings'
 
 function Dashboard() {
   return (
@@ -12,12 +13,11 @@ function Dashboard() {
         <div className='container'>
           <Balance/>
           <Expenses/>
-          <Spending/>
+          <Savings/>
           <Last_transactions/>
         </div>
-
-        <div className='container'>
-          
+        <div className='spend_cont'>
+          <Spending/>   
         </div>
       </span>
       <span></span>

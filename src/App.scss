@@ -298,6 +298,8 @@ body {
 .dashboard {
     display: flex;
     padding: 8px;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .balance {
@@ -346,11 +348,9 @@ body {
 /// pages
 
 .dashboard {
-    height: 1000px;
+    height: calc(100vh - 80px);
     display: flex;
     gap: 10px;
-    
-
     .chart {
         width: 100%;
         height: 200px;
@@ -552,41 +552,58 @@ body {
     
     
 }
+
+.spend_cont {
+    height: 400px;
+    width: 100%;
+}
 .spending {
+    height: 100%;
+}
+.savings {
     display: flex;
     flex-direction: column;
-    height: 200px;
-    .chart {
-        width: 100%;
-        height: 80%;
+    padding: 8px;
+    border-radius: 8px;
+    outline: 1px solid transparentize($color: $grey, $amount: 0.5);
+    gap: 10px;
+    h2 {
         align-self: center;
-        margin: 8px;
-        border-radius: 8px;
-        outline: 1px solid transparentize($color: $grey, $amount: 0.5);
+        color: $accent;
     }
-    h4 {
-        text-transform: capitalize;
-    }
-    .flow {
+    .goal {
         display: flex;
         align-items: center;
-        font-weight: 600;
-        text-transform: capitalize;
-        font-size: 14px;
-        span:before {
-            content:  "";
-            background-color: $accent;
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
+        align-self: center;
+        * {
+            // font-size: 12px;
         }
-        span {
-            display: flex;
-            align-items: center;
+        p {
+            color: $accent;
         }
-        .flow_spend::before {
-            background-color: $main;
+        p:last-child{
+            color: $main;
         }
+    }
+    .savings_progress {
+        width: 100px;
+        align-self: center;
+        position: relative;
+        display: grid;
+        place-items: center;
+        p {
+            position: absolute;
+            
+        }
+    }
+    
+    p {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        align-self: center;
+        margin-top: auto;
     }
 }
 
