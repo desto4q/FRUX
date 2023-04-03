@@ -5,6 +5,8 @@ import Expenses from '../components/Expenses'
 import Last_transactions from '../components/Last_transactions'
 import Spending from '../components/Spending'
 import Savings from '../components/Savings'
+import Card from '../components/Card'
+import Budget from '../components/Budget'
 
 function Dashboard() {
   return (
@@ -20,7 +22,10 @@ function Dashboard() {
           <Spending/>   
         </div>
       </span>
-      <span></span>
+      <span className='dash_details'>
+        <Card/>
+        <Budget/>
+      </span>
     </div>
   )
 }

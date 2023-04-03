@@ -24,11 +24,11 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
+      position: "top",
     },
     title: {
       display: true,
-      text: 'Chart.js Bar Chart',
+      text: 'Total spending',
     },
   },
 };
@@ -40,12 +40,12 @@ export const data = {
   datasets: [
     {
       label: 'Income',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000000 })),
       backgroundColor: '#5E36F5',
     },
     {
       label: 'Outflow',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000000 })),
       backgroundColor: '#1E1E1E',
     },
   ],
@@ -57,9 +57,16 @@ export const data = {
 
 function Spending() {
 
-
+  console.log(options)
   return (
     <div className='spending'>
+      <div className='option'>
+        <select>
+          <option value="value">Monthly</option>
+          <option value="Daily">Daily</option>
+          <option value="Year">Year</option>
+        </select>
+      </div>
       <Bar options={options} data={data}/>
     </div>
   )
