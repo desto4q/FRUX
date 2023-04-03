@@ -354,7 +354,8 @@ body {
     .dash_details {
         display: flex;
         flex-direction: column;
-        background-color: blue !important;
+        background-color: blue ;
+        align-items: center;
     }
     .chart {
         width: 100%;
@@ -576,7 +577,7 @@ body {
     // width: 340px;
     height: 200px;
     max-height: 200px;
-    width: 100%;
+    width: 90%;
     min-width: 220px;   
     position: relative;
     display: grid;
